@@ -88,7 +88,8 @@ struct ResultView: View {
     private var failureButtons: some View {
         HStack {
             Button {
-                
+                viewModel.restart()
+                dismiss()
             } label: {
                 Text(Texts.MainPage.ResultPage.restart)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -104,7 +105,8 @@ struct ResultView: View {
             .padding(.vertical)
             
             Button {
-                
+                viewModel.buyChecks()
+                dismiss()
             } label: {
                 Text(Texts.MainPage.ResultPage.buy)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)

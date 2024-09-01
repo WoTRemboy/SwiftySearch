@@ -23,7 +23,7 @@ struct MainView: View {
             
             .onChange(of: viewModel.result, initial: false) {
                 guard viewModel.result != .none else { return }
-                showingResultPage.toggle()
+                showingResultPage = true
             }
         }
         .sheet(isPresented: $showingResultPage, content: {
@@ -43,7 +43,7 @@ struct MainView: View {
                 Text("\(Texts.MainPage.score): \(viewModel.score)")
                     .font(.body())
             }
-            Text("\(Texts.MainPage.remaining): \(viewModel.remainingChecks)")
+            Text(viewModel.remainingChecksString)
                 .padding(.top)
                 .font(.segmentTitle())
         }
