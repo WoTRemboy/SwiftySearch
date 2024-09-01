@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftySearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let environmentObject = MainViewModel()
+            MainView()
+                .environmentObject(environmentObject)
         }
     }
 }
