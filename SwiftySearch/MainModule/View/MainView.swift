@@ -21,8 +21,9 @@ struct MainView: View {
             button
             Spacer()
             
-            .onChange(of: viewModel.win, initial: false) {
-                showingResultPage = true
+            .onChange(of: viewModel.result, initial: false) {
+                guard viewModel.result != .none else { return }
+                showingResultPage.toggle()
             }
         }
         .sheet(isPresented: $showingResultPage, content: {

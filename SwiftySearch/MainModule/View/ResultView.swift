@@ -10,6 +10,7 @@ import SwiftUI
 struct ResultView: View {
     
     @EnvironmentObject private var viewModel: MainViewModel
+    @Environment(\.dismiss) private var dismiss
     
     internal var body: some View {
         VStack(spacing: 16) {
@@ -49,7 +50,8 @@ struct ResultView: View {
     
     private var levelButton: some View {
         Button {
-            
+            viewModel.nextLevel()
+            dismiss()
         } label: {
             Text(Texts.MainPage.ResultPage.next)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
