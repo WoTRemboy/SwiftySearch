@@ -33,16 +33,25 @@ final class MainViewModel: ObservableObject {
     
     internal func cutOffGap(current: Float) {
         remainingChecks -= 1
-        withAnimation {
-            if Int(current) < targetNumber {
-                bounds.min = current
-            } else if Int(current) > targetNumber {
-                bounds.max = current
-            } else {
+        if remainingChecks == 0 {
+            if Int(current) == targetNumber {
                 result = .success
                 score += remainingChecks * 100
+            } else {
+                result = .failure
             }
-            print(targetNumber)
+        } else {
+            withAnimation {
+                if Int(current) < targetNumber {
+                    bounds.min = current
+                } else if Int(current) > targetNumber {
+                    bounds.max = current
+                } else {
+                    result = .success
+                    score += remainingChecks * 100
+                }
+                print(targetNumber)
+            }
         }
     }
     
@@ -54,6 +63,8 @@ final class MainViewModel: ObservableObject {
             currentNumber = 0
         }
         targetNumber = Int.random(in: 0...(110 - currentLevel * 10))
-        result = .none
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.result = .none
+        }
     }
 }

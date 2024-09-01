@@ -16,9 +16,14 @@ final class Texts {
         
         enum ResultPage {
             static let completed = "Level completed!"
+            static let failed = "Level failed!"
+            
             static let score = "Score"
             static let checks = "Checks"
+            
             static let next = "Next level"
+            static let restart = "Restart"
+            static let buy = "Buy checks"
         }
     }
 }

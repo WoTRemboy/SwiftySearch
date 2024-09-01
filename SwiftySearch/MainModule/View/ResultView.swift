@@ -14,9 +14,17 @@ struct ResultView: View {
     
     internal var body: some View {
         VStack(spacing: 16) {
-            image
+            if viewModel.result == .success {
+                successImage
+            } else {
+                failureImage
+            }
             content
-            levelButton
+            if viewModel.result == .success {
+                levelButton
+            } else {
+                failureButtons
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .frame(height: 320)
@@ -27,8 +35,17 @@ struct ResultView: View {
         .padding(.horizontal)
     }
     
-    private var image: some View {
+    private var successImage: some View {
         Image.ResultsPage.success
+            .resizable()
+            .scaledToFit()
+            .frame(width: 100)
+            .clipShape(.buttonBorder)
+            .padding(.top)
+    }
+    
+    private var failureImage: some View {
+        Image.ResultsPage.failure
             .resizable()
             .scaledToFit()
             .frame(width: 100)
@@ -38,7 +55,7 @@ struct ResultView: View {
     
     private var content: some View {
         VStack(spacing: 10) {
-            Text(Texts.MainPage.ResultPage.completed)
+            Text(viewModel.result == .success ? Texts.MainPage.ResultPage.completed : Texts.MainPage.ResultPage.failed)
                 .font(.segmentTitle())
             
             HStack(spacing: 40) {
@@ -66,6 +83,43 @@ struct ResultView: View {
         
         .padding(.horizontal)
         .padding(.vertical)
+    }
+    
+    private var failureButtons: some View {
+        HStack {
+            Button {
+                
+            } label: {
+                Text(Texts.MainPage.ResultPage.restart)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            }
+            .frame(width: 100, height: 50)
+            .minimumScaleFactor(0.4)
+            
+            .foregroundStyle(Color.orange)
+            .tint(Color.orange)
+            .buttonStyle(.bordered)
+            
+            .padding(.horizontal)
+            .padding(.vertical)
+            
+            Button {
+                
+            } label: {
+                Text(Texts.MainPage.ResultPage.buy)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .minimumScaleFactor(0.4)
+            
+            .foregroundStyle(Color.green)
+            .tint(Color.green)
+            .buttonStyle(.bordered)
+            
+            .padding(.trailing)
+            .padding(.vertical)
+        }
     }
 }
 
