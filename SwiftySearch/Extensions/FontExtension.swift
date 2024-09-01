@@ -8,6 +8,10 @@
 import SwiftUI
 
 extension Font {
+    static func searchNumber() -> Font? {
+        Font.system(size: 80, weight: .regular)
+    }
+    
     static func largeTitle() -> Font? {
         Font.system(size: 35, weight: .bold)
     }

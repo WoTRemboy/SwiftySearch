@@ -14,6 +14,9 @@
 		63611A752C84FD38001C1973 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A742C84FD38001C1973 /* MainViewModel.swift */; };
 		63611A7D2C8505DC001C1973 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A7C2C8505DC001C1973 /* FontExtension.swift */; };
 		63611A7F2C85069B001C1973 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A7E2C85069B001C1973 /* Labels.swift */; };
+		63611A812C8509FE001C1973 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A802C8509FE001C1973 /* ResultView.swift */; };
+		63611A832C850F9D001C1973 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A822C850F9D001C1973 /* ImageExtension.swift */; };
+		63611A852C851291001C1973 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A842C851291001C1973 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		63611A742C84FD38001C1973 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		63611A7C2C8505DC001C1973 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		63611A7E2C85069B001C1973 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		63611A802C8509FE001C1973 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		63611A822C850F9D001C1973 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		63611A842C851291001C1973 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				63611A722C84FCCD001C1973 /* MainView.swift */,
+				63611A802C8509FE001C1973 /* ResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				63611A7C2C8505DC001C1973 /* FontExtension.swift */,
+				63611A822C850F9D001C1973 /* ImageExtension.swift */,
+				63611A842C851291001C1973 /* ColorExtension.swift */,
 				63611A7E2C85069B001C1973 /* Labels.swift */,
 			);
 			path = Extensions;
@@ -197,8 +206,11 @@
 				63611A632C84FC4B001C1973 /* SwiftySearchApp.swift in Sources */,
 				63611A7F2C85069B001C1973 /* Labels.swift in Sources */,
 				63611A732C84FCCD001C1973 /* MainView.swift in Sources */,
+				63611A852C851291001C1973 /* ColorExtension.swift in Sources */,
+				63611A832C850F9D001C1973 /* ImageExtension.swift in Sources */,
 				63611A7D2C8505DC001C1973 /* FontExtension.swift in Sources */,
 				63611A752C84FD38001C1973 /* MainViewModel.swift in Sources */,
+				63611A812C8509FE001C1973 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
