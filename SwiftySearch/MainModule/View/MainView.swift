@@ -14,9 +14,12 @@ struct MainView: View {
     
     internal var body: some View {
         VStack {
+            stats
+            Spacer()
             currentNumber
             slider
             button
+            Spacer()
             
             .onChange(of: viewModel.win, initial: false) {
                 showingResultPage = true
@@ -28,6 +31,22 @@ struct MainView: View {
                 .presentationBackground(.clear)
                 .interactiveDismissDisabled()
         })
+    }
+    
+    private var stats: some View {
+        VStack {
+            HStack {
+                Text("\(Texts.MainPage.level): 1")
+                    .font(.body())
+                Spacer()
+                Text("\(Texts.MainPage.score): 800")
+                    .font(.body())
+            }
+            Text("\(Texts.MainPage.remaining): 10")
+                .padding(.top)
+                .font(.segmentTitle())
+        }
+        .padding([.top, .horizontal])
     }
     
     private var currentNumber: some View {
@@ -65,7 +84,8 @@ struct MainView: View {
         .buttonStyle(.bordered)
         
         .padding(.horizontal)
-        .padding(.vertical, 30)
+        .padding(.top, 50)
+        .padding(.bottom, 100)
     
     }
 }
