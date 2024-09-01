@@ -82,6 +82,7 @@ final class MainViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.result = .none
         }
+        print(targetNumber)
     }
     
     internal func restart() {

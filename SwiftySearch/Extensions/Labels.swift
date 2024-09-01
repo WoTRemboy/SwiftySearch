@@ -24,6 +24,10 @@ final class Texts {
             static let next = "Next level"
             static let restart = "Restart"
             static let buy = "Buy checks"
+            
+            static let alertTitle = "Purchase completed"
+            static let alertContent = "Try your luck this time"
+            static let ok = "OK"
         }
     }
 }

@@ -12,6 +12,8 @@ struct ResultView: View {
     @EnvironmentObject private var viewModel: MainViewModel
     @Environment(\.dismiss) private var dismiss
     
+    @State private var showingBuyAlert = false
+    
     internal var body: some View {
         VStack(spacing: 16) {
             if viewModel.result == .success {
@@ -106,7 +108,7 @@ struct ResultView: View {
             
             Button {
                 viewModel.buyChecks()
-                dismiss()
+                showingBuyAlert = true
             } label: {
                 Text(Texts.MainPage.ResultPage.buy)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -121,6 +123,16 @@ struct ResultView: View {
             
             .padding(.trailing)
             .padding(.vertical)
+            
+            .alert(isPresented: $showingBuyAlert) {
+                Alert(
+                    title: Text(Texts.MainPage.ResultPage.alertTitle),
+                    message: Text(Texts.MainPage.ResultPage.alertContent),
+                    dismissButton: .default(Text(Texts.MainPage.ResultPage.ok)) {
+                        dismiss()
+                    }
+                )
+            }
         }
     }
 }
