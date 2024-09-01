@@ -14,7 +14,7 @@ struct MainView: View {
     internal var body: some View {
         VStack {
             Text(viewModel.stringNumber)
-                .font(.largeTitle)
+                .font(.system(size: 80))
             
             Slider(value: $viewModel.currentNumber, in: viewModel.bounds.min...viewModel.bounds.max, step: 1)
                 .padding(.horizontal)
@@ -32,9 +32,9 @@ struct MainView: View {
     
     private var button: some View {
         Button {
-            viewModel.cutOffGap()
+            viewModel.cutOffGap(current: viewModel.currentNumber)
         } label: {
-            Text("Check")
+            Text(Texts.MainPage.check)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
         .frame(height: 50)

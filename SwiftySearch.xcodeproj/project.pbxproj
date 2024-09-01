@@ -12,6 +12,8 @@
 		63611A6A2C84FC4C001C1973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63611A692C84FC4C001C1973 /* Preview Assets.xcassets */; };
 		63611A732C84FCCD001C1973 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A722C84FCCD001C1973 /* MainView.swift */; };
 		63611A752C84FD38001C1973 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A742C84FD38001C1973 /* MainViewModel.swift */; };
+		63611A7D2C8505DC001C1973 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A7C2C8505DC001C1973 /* FontExtension.swift */; };
+		63611A7F2C85069B001C1973 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63611A7E2C85069B001C1973 /* Labels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		63611A692C84FC4C001C1973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63611A722C84FCCD001C1973 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		63611A742C84FD38001C1973 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		63611A7C2C8505DC001C1973 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		63611A7E2C85069B001C1973 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			children = (
 				63611A702C84FCA6001C1973 /* Application */,
 				63611A712C84FCAF001C1973 /* MainModule */,
+				63611A7B2C8505C2001C1973 /* Extensions */,
 				63611A772C850404001C1973 /* SupportFiles */,
 				63611A682C84FC4C001C1973 /* Preview Content */,
 			);
@@ -80,8 +85,8 @@
 		63611A712C84FCAF001C1973 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				63611A722C84FCCD001C1973 /* MainView.swift */,
-				63611A742C84FD38001C1973 /* MainViewModel.swift */,
+				63611A7A2C8505AA001C1973 /* View */,
+				63611A792C8505A2001C1973 /* ViewModel */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -92,6 +97,31 @@
 				63611A662C84FC4C001C1973 /* Assets.xcassets */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		63611A792C8505A2001C1973 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63611A742C84FD38001C1973 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63611A7A2C8505AA001C1973 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63611A722C84FCCD001C1973 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63611A7B2C8505C2001C1973 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63611A7C2C8505DC001C1973 /* FontExtension.swift */,
+				63611A7E2C85069B001C1973 /* Labels.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63611A632C84FC4B001C1973 /* SwiftySearchApp.swift in Sources */,
+				63611A7F2C85069B001C1973 /* Labels.swift in Sources */,
 				63611A732C84FCCD001C1973 /* MainView.swift in Sources */,
+				63611A7D2C8505DC001C1973 /* FontExtension.swift in Sources */,
 				63611A752C84FD38001C1973 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

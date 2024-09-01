@@ -24,12 +24,12 @@ final class MainViewModel: ObservableObject {
         (String(Int(bounds.min)), String(Int(bounds.max)))
     }
     
-    internal func cutOffGap() {
+    internal func cutOffGap(current: Float) {
         withAnimation {
-            if Int(currentLevel) < targetNumber {
-                bounds.max = currentNumber
-            } else if Int(currentLevel) > targetNumber {
-                bounds.min = currentNumber
+            if Int(current) < targetNumber {
+                bounds.min = current
+            } else if Int(current) > targetNumber {
+                bounds.max = current
             } else {
                 win = true
             }
