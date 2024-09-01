@@ -36,13 +36,13 @@ struct MainView: View {
     private var stats: some View {
         VStack {
             HStack {
-                Text("\(Texts.MainPage.level): 1")
+                Text("\(Texts.MainPage.level): \(viewModel.currentLevel)")
                     .font(.body())
                 Spacer()
-                Text("\(Texts.MainPage.score): 800")
+                Text("\(Texts.MainPage.score): \(viewModel.score)")
                     .font(.body())
             }
-            Text("\(Texts.MainPage.remaining): 10")
+            Text("\(Texts.MainPage.remaining): \(viewModel.remainingChecks)")
                 .padding(.top)
                 .font(.segmentTitle())
         }

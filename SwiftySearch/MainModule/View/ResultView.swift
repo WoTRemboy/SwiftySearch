@@ -41,8 +41,8 @@ struct ResultView: View {
                 .font(.segmentTitle())
             
             HStack(spacing: 40) {
-                Text("\(Texts.MainPage.ResultPage.score): 800")
-                Text("\(Texts.MainPage.ResultPage.checks): 6")
+                Text("\(Texts.MainPage.ResultPage.score): \(viewModel.score)")
+                Text("\(Texts.MainPage.ResultPage.checks): \(viewModel.checks)")
             }
         }
     }
